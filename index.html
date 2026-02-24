@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DnDWeb – Interface D&D</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>⚔️ DnDWeb</h1>
+    <p class="subtitle">Ton interface Donjons &amp; Dragons</p>
+  </header>
+
+  <main>
+    <!-- ── CHARACTER SHEET ─────────────────────────────── -->
+    <section id="character-section" class="card">
+      <h2>🧙 Fiche de personnage</h2>
+      <div class="char-header">
+        <div class="field">
+          <label>Nom</label>
+          <input id="char-name" type="text" placeholder="Nom du personnage" />
+        </div>
+        <div class="field">
+          <label>Classe</label>
+          <input id="char-class" type="text" placeholder="Guerrier, Mage…" />
+        </div>
+        <div class="field">
+          <label>Race</label>
+          <input id="char-race" type="text" placeholder="Humain, Elfe…" />
+        </div>
+        <div class="field">
+          <label>Niveau</label>
+          <input id="char-level" type="number" min="1" max="20" value="1" />
+        </div>
+      </div>
+
+      <h3>Caractéristiques</h3>
+      <div class="stats-grid">
+        <div class="stat-box" id="stat-str">
+          <div class="stat-label">FOR</div>
+          <input class="stat-input" type="number" id="str" min="1" max="30" value="10" />
+          <div class="stat-mod" id="str-mod">+0</div>
+        </div>
+        <div class="stat-box" id="stat-dex">
+          <div class="stat-label">DEX</div>
+          <input class="stat-input" type="number" id="dex" min="1" max="30" value="10" />
+          <div class="stat-mod" id="dex-mod">+0</div>
+        </div>
+        <div class="stat-box" id="stat-con">
+          <div class="stat-label">CON</div>
+          <input class="stat-input" type="number" id="con" min="1" max="30" value="10" />
+          <div class="stat-mod" id="con-mod">+0</div>
+        </div>
+        <div class="stat-box" id="stat-int">
+          <div class="stat-label">INT</div>
+          <input class="stat-input" type="number" id="int" min="1" max="30" value="10" />
+          <div class="stat-mod" id="int-mod">+0</div>
+        </div>
+        <div class="stat-box" id="stat-wis">
+          <div class="stat-label">SAG</div>
+          <input class="stat-input" type="number" id="wis" min="1" max="30" value="10" />
+          <div class="stat-mod" id="wis-mod">+0</div>
+        </div>
+        <div class="stat-box" id="stat-cha">
+          <div class="stat-label">CHA</div>
+          <input class="stat-input" type="number" id="cha" min="1" max="30" value="10" />
+          <div class="stat-mod" id="cha-mod">+0</div>
+        </div>
+      </div>
+
+      <div class="combat-row">
+        <div class="field">
+          <label>PV Max</label>
+          <input id="hp-max" type="number" min="1" value="10" />
+        </div>
+        <div class="field">
+          <label>PV Actuels</label>
+          <input id="hp-current" type="number" min="0" value="10" />
+        </div>
+        <div class="field">
+          <label>Classe d'armure</label>
+          <input id="ac" type="number" min="1" value="10" />
+        </div>
+        <div class="field">
+          <label>Vitesse</label>
+          <input id="speed" type="number" min="0" value="30" />
+        </div>
+      </div>
+
+      <div class="hp-controls">
+        <button class="btn btn-danger" onclick="adjustHP(-1)">− Dégâts</button>
+        <input id="hp-delta" type="number" min="1" value="1" />
+        <button class="btn btn-success" onclick="adjustHP(1)">+ Soins</button>
+      </div>
+      <div id="hp-bar-container">
+        <div id="hp-bar"></div>
+      </div>
+    </section>
+
+    <!-- ── DICE ROLLER ─────────────────────────────────── -->
+    <section id="dice-section" class="card">
+      <h2>🎲 Lancer de dés</h2>
+      <div class="dice-buttons">
+        <button class="btn dice-btn" onclick="rollDice(4)">d4</button>
+        <button class="btn dice-btn" onclick="rollDice(6)">d6</button>
+        <button class="btn dice-btn" onclick="rollDice(8)">d8</button>
+        <button class="btn dice-btn" onclick="rollDice(10)">d10</button>
+        <button class="btn dice-btn" onclick="rollDice(12)">d12</button>
+        <button class="btn dice-btn btn-featured" onclick="rollDice(20)">d20</button>
+        <button class="btn dice-btn" onclick="rollDice(100)">d100</button>
+      </div>
+      <div class="dice-custom">
+        <label>Quantité</label>
+        <input id="dice-count" type="number" min="1" max="99" value="1" />
+        <label>Modificateur</label>
+        <input id="dice-modifier" type="number" value="0" />
+        <label>Avantage/Désavantage</label>
+        <select id="dice-adv">
+          <option value="none">Normal</option>
+          <option value="adv">Avantage</option>
+          <option value="dis">Désavantage</option>
+        </select>
+      </div>
+      <div id="dice-result" class="dice-result hidden">
+        <div id="dice-roll-display"></div>
+        <div id="dice-total"></div>
+      </div>
+      <div id="dice-history" class="dice-history"></div>
+    </section>
+
+    <!-- ── INITIATIVE TRACKER ──────────────────────────── -->
+    <section id="initiative-section" class="card">
+      <h2>⚡ Ordre d'initiative</h2>
+      <div class="init-add">
+        <input id="init-name" type="text" placeholder="Nom" />
+        <input id="init-value" type="number" placeholder="Initiative" />
+        <button class="btn btn-primary" onclick="addInitiative()">Ajouter</button>
+        <button class="btn" onclick="rollInitiative()">🎲 Lancer (d20)</button>
+      </div>
+      <ul id="initiative-list"></ul>
+      <button class="btn btn-danger" onclick="clearInitiative()">Réinitialiser</button>
+    </section>
+
+    <!-- ── NOTES ───────────────────────────────────────── -->
+    <section id="notes-section" class="card">
+      <h2>📝 Notes de campagne</h2>
+      <textarea id="notes" placeholder="Écris tes notes ici… PNJ rencontrés, indices, quêtes…"></textarea>
+      <div class="notes-footer">
+        <button class="btn btn-success" onclick="saveNotes()">💾 Sauvegarder</button>
+        <span id="notes-saved" class="hidden">✓ Sauvegardé</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>DnDWeb – fait pour rendre le jeu plus facile ⚔️🐉</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

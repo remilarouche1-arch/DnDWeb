@@ -1,0 +1,454 @@
+/* ──────────────────────────────────────────────────────────
+   DnDWeb – Styles
+   ────────────────────────────────────────────────────────── */
+
+:root {
+  --bg: #1a1207;
+  --surface: #2b1d0e;
+  --surface2: #3a2812;
+  --border: #6b4c2a;
+  --gold: #c9a84c;
+  --gold-light: #e8cc80;
+  --red: #c0392b;
+  --green: #27ae60;
+  --blue: #2980b9;
+  --text: #f0e6c8;
+  --text-muted: #b8a07a;
+  --radius: 8px;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(201, 168, 76, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 90%, rgba(192, 57, 43, 0.06) 0%, transparent 50%);
+  color: var(--text);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  border-bottom: 2px solid var(--gold);
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: var(--gold-light);
+  text-shadow: 0 2px 8px rgba(201, 168, 76, 0.5);
+  letter-spacing: 2px;
+}
+
+header .subtitle {
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+/* ── Main layout ─────────────────────────────────────────── */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* ── Card ────────────────────────────────────────────────── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  color: var(--gold);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.card h3 {
+  color: var(--gold-light);
+  font-size: 1rem;
+  margin: 1rem 0 0.5rem;
+}
+
+/* ── Form helpers ────────────────────────────────────────── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+/* ── Character header row ────────────────────────────────── */
+.char-header {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Stats grid ──────────────────────────────────────────── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-box {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+  padding: 0.5rem 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+}
+
+.stat-input {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--gold-light);
+  padding: 0.1rem 0;
+}
+
+.stat-input:focus {
+  outline: none;
+  border-bottom-color: var(--gold);
+}
+
+.stat-mod {
+  font-size: 0.95rem;
+  color: var(--gold);
+  margin-top: 0.2rem;
+}
+
+/* ── Combat row ──────────────────────────────────────────── */
+.combat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.combat-row input {
+  width: 100%;
+}
+
+/* ── HP controls ─────────────────────────────────────────── */
+.hp-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hp-controls input {
+  width: 70px;
+  text-align: center;
+}
+
+#hp-bar-container {
+  height: 14px;
+  background: var(--surface2);
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+#hp-bar {
+  height: 100%;
+  width: 100%;
+  background: var(--green);
+  border-radius: 99px;
+  transition: width 0.4s ease, background 0.4s ease;
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.45rem 1rem;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.btn:hover {
+  background: var(--border);
+  border-color: var(--gold);
+}
+
+.btn-primary {
+  background: var(--blue);
+  border-color: #3498db;
+}
+
+.btn-primary:hover {
+  background: #3498db;
+}
+
+.btn-success {
+  background: var(--green);
+  border-color: #2ecc71;
+}
+
+.btn-success:hover {
+  background: #2ecc71;
+}
+
+.btn-danger {
+  background: var(--red);
+  border-color: #e74c3c;
+}
+
+.btn-danger:hover {
+  background: #e74c3c;
+}
+
+/* ── Dice section ─────────────────────────────────────────── */
+.dice-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.dice-btn {
+  font-size: 1rem;
+  font-weight: bold;
+  min-width: 52px;
+  letter-spacing: 0.03em;
+}
+
+.btn-featured {
+  background: var(--gold);
+  border-color: var(--gold-light);
+  color: var(--bg);
+  font-size: 1.1rem;
+}
+
+.btn-featured:hover {
+  background: var(--gold-light);
+}
+
+.dice-custom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.dice-custom input,
+.dice-custom select {
+  width: 90px;
+}
+
+.dice-result {
+  text-align: center;
+  padding: 1rem;
+  background: var(--surface2);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+#dice-roll-display {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  word-break: break-all;
+}
+
+#dice-total {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--gold-light);
+  text-shadow: 0 0 12px rgba(201, 168, 76, 0.5);
+}
+
+.dice-history {
+  max-height: 130px;
+  overflow-y: auto;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+}
+
+.dice-history p {
+  padding: 0.1rem 0;
+  border-bottom: 1px solid rgba(107, 76, 42, 0.3);
+}
+
+/* ── Initiative tracker ───────────────────────────────────── */
+.init-add {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.init-add input {
+  flex: 1;
+  min-width: 100px;
+}
+
+#initiative-list {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+#initiative-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.75rem;
+  margin-bottom: 0.35rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+#initiative-list li.active {
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+}
+
+.init-score {
+  background: var(--gold);
+  color: var(--bg);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.init-name {
+  flex: 1;
+  margin: 0 0.75rem;
+}
+
+.init-remove {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0 0.25rem;
+}
+
+.init-remove:hover {
+  color: var(--red);
+}
+
+/* ── Notes ────────────────────────────────────────────────── */
+#notes {
+  width: 100%;
+  min-height: 180px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.notes-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#notes-saved {
+  color: var(--green);
+  font-size: 0.9rem;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 2rem 1rem 1rem;
+  font-style: italic;
+}
+
+/* ── Utilities ───────────────────────────────────────────── */
+.hidden {
+  display: none !important;
+}
