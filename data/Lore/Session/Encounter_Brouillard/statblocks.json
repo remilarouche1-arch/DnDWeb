@@ -1,0 +1,134 @@
+{
+  "session": "Encounter Brouillard - Route secondaire",
+  "style": "monster-manual-inspired",
+  "units": "ft",
+  "creatures": [
+    {
+      "id": "syrha-voix-fendue",
+      "name": "Syrha la Voix Fendue",
+      "subtitle": "Medium mort-vivant, chaotique mauvais",
+      "ac": "12",
+      "hp": "58 (13d8)",
+      "speed": "0 ft., vol 40 ft. (stationnaire)",
+      "abilities": { "str": 1, "dex": 14, "con": 10, "int": 12, "wis": 11, "cha": 17 },
+      "saves": ["SAG +2", "CHA +5"],
+      "skills": ["Intimidation +5", "Perception +2"],
+      "resistances": [
+        "acide, feu, foudre, tonnerre",
+        "contondants, perforants et tranchants non magiques",
+        "froid, necrotique, poison"
+      ],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 12"],
+      "languages": ["commun", "elfique"],
+      "cr": "4 (1100 PX)",
+      "traits": [
+        {
+          "name": "Mouvement incorporel",
+          "text": "Traverse creatures/objets (terrain difficile). Fin de tour dans un objet: 1d10 force."
+        },
+        {
+          "name": "Detection de la vie",
+          "text": "Detecte les creatures vivantes dans 5 miles (sauf protection magique)."
+        },
+        {
+          "name": "Voile de Syrha (trait de rencontre)",
+          "text": "Aura mobile centree sur Syrha. Debut de tour dans la zone: DD15 SAG, rate = pas de reaction jusqu'au prochain tour."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Contact corrupteur",
+          "text": "Melee 5ft Att+4 3d6+2 necro."
+        },
+        {
+          "name": "Visage terrifiant",
+          "text": "Vue 60ft DD13 SAG, rate = effraye 1min (nouveau DD13 SAG fin de tour). Echec de 5+ = panique 1 tour (s'eloigne, pas de rapprochement)."
+        },
+        {
+          "name": "Hurlement (Recharge 6)",
+          "text": "Aura 30ft (vivants): degats psy = 50% des PV actuels cumules, repartis aussi egalement que possible."
+        }
+      ],
+      "bonus_actions": [],
+      "reactions": []
+    },
+    {
+      "id": "vardek-guette-cendres",
+      "name": "Vardek le Guette-Cendres",
+      "subtitle": "Medium mort-vivant, neutre mauvais",
+      "ac": "14 (armure de cuir cloute)",
+      "hp": "45 (6d8+18)",
+      "speed": "30 ft.",
+      "abilities": { "str": 15, "dex": 14, "con": 16, "int": 10, "wis": 13, "cha": 15 },
+      "saves": ["SAG +3"],
+      "skills": ["Perception +3", "Intimidation +4"],
+      "resistances": ["necrotique", "poison"],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 13"],
+      "languages": ["commun", "une langue de son vivant"],
+      "cr": "3 (700 PX)",
+      "traits": [
+        {
+          "name": "Sensibilite au soleil",
+          "text": "Plein soleil: desavantage aux attaques et Perception basee sur la vue."
+        },
+        {
+          "name": "Gardien du domaine",
+          "text": "Avantage aux saves contre effets qui l'eloignent de la zone de Syrha."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Multiattaque",
+          "text": "2 attaques (epee longue ou arc long)."
+        },
+        {
+          "name": "Epee longue",
+          "text": "Melee 5ft Att+4 1d8+2 tranch +1d8 necro."
+        },
+        {
+          "name": "Arc long",
+          "text": "Dist 150/600ft Att+4 1d8+2 perc +1d8 necro."
+        }
+      ],
+      "bonus_actions": [],
+      "reactions": []
+    },
+    {
+      "id": "spectre-du-domaine",
+      "name": "Spectre du domaine",
+      "subtitle": "Medium mort-vivant, chaotique mauvais",
+      "ac": "12",
+      "hp": "22 (5d8)",
+      "speed": "0 ft., vol 50 ft. (stationnaire)",
+      "abilities": { "str": 1, "dex": 14, "con": 11, "int": 10, "wis": 10, "cha": 11 },
+      "saves": [],
+      "skills": [],
+      "resistances": [
+        "acide, froid, feu, foudre, tonnerre",
+        "contondants, perforants et tranchants non magiques",
+        "necrotique, poison"
+      ],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 10"],
+      "languages": ["comprend les langues de son vivant, mais ne peut pas parler"],
+      "cr": "1 (200 PX)",
+      "traits": [
+        {
+          "name": "Mouvement incorporel",
+          "text": "Traverse creatures/objets (terrain difficile). Fin de tour dans un objet: 1d10 force."
+        },
+        {
+          "name": "Sensibilite au soleil",
+          "text": "Plein soleil: desavantage aux attaques et Perception basee sur la vue."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Drain de vie",
+          "text": "Melee 5ft Att+4 3d6 necro | DD10 CON rate: PV max -degats."
+        }
+      ],
+      "bonus_actions": [],
+      "reactions": []
+    }
+  ]
+}

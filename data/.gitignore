@@ -1,0 +1,17 @@
+# Keep the repo lightweight; store large source docs elsewhere or via LFS if needed.
+
+# ArcGIS / installers accidentally dropped here
+Herbs/ArcGIS*
+Herbs/**/ArcGIS*
+
+# Never commit installers / archives
+*.exe
+*.msi
+*.cab
+*.zip
+
+# Common big docs (enable later with LFS if you really want them in git)
+*.pdf
+*.xlsx
+*.xls
+

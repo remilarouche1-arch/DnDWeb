@@ -1,0 +1,276 @@
+{
+  "session": "Crossroad hideout",
+  "style": "monster-manual-inspired",
+  "units": "ft",
+  "creatures": [
+    {
+      "id": "kragha-voix-de-pierre",
+      "name": "Kragha Voix-de-Pierre",
+      "subtitle": "Medium humanoide (orc), neutre mauvais",
+      "ac": "15",
+      "hp": "52 (8d8+16)",
+      "speed": "30 ft.",
+      "abilities": { "str": 14, "dex": 12, "con": 14, "int": 11, "wis": 13, "cha": 15 },
+      "saves": ["SAG +3", "CHA +4"],
+      "skills": ["Intimidation +4", "Perception +3"],
+      "resistances": [],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 13"],
+      "languages": ["commun", "orc"],
+      "cr": "2 (450 PX)",
+      "traits": [
+        {
+          "name": "Coordination rude",
+          "text": "Allie a 30ft: +1d4 sur sa prochaine attaque contre une cible touchee par Kragha ce tour."
+        },
+        {
+          "name": "Chef de carrefour (1/tour)",
+          "text": "Quand un allie a 30ft touche, il gagne +2 degats."
+        }
+      ],
+      "actions": [
+        { "name": "Hache de guerre", "text": "Melee 5ft Att+4 1d8+2 tranch." },
+        { "name": "Javeline", "text": "Dist 30/120ft Att+4 1d6+2 perc." },
+        { "name": "Ordre sec (R5-6)", "text": "1 allie a 30ft: deplacement moitie vitesse + 1 attaque." }
+      ],
+      "bonus_actions": [],
+      "reactions": []
+    },
+    {
+      "id": "dorek-brise-chaine",
+      "name": "Dorek Brise-Chaine",
+      "subtitle": "Medium humanoide (demi-orc), chaotique neutre",
+      "ac": "16",
+      "hp": "65 (10d8+20)",
+      "speed": "30 ft.",
+      "abilities": { "str": 16, "dex": 14, "con": 14, "int": 11, "wis": 12, "cha": 14 },
+      "saves": ["FOR +5", "CON +4"],
+      "skills": ["Persuasion +4", "Intimidation +4", "Perception +3"],
+      "resistances": [],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 13"],
+      "languages": ["commun", "orc"],
+      "cr": "3 (700 PX)",
+      "traits": [
+        {
+          "name": "Meneur de ligne",
+          "text": "Si un allie est a 5ft de Dorek, Dorek gagne +1 CA."
+        },
+        {
+          "name": "Endurance implacable (1/jour)",
+          "text": "A 0 PV, passe a 1 PV."
+        }
+      ],
+      "actions": [
+        { "name": "Multiattaque", "text": "2 attaques (epee longue ou arbalete de poing)." },
+        { "name": "Epee longue", "text": "Melee 5ft Att+5 1d8+3 tranch." },
+        { "name": "Arbalete de poing", "text": "Dist 30/120ft Att+4 1d6+2 perc." }
+      ],
+      "bonus_actions": [
+        {
+          "name": "Marquage de cible",
+          "text": "1 ennemi a 60ft; jusqu'au prochain tour de Dorek, les attaques des locaux archers contre cette cible gagnent +1d4 degats."
+        }
+      ],
+      "reactions": []
+    },
+    {
+      "id": "goerbel-main-rouge",
+      "name": "Goerbel Main-Rouge",
+      "subtitle": "Medium humanoide (orc), chaotique mauvais",
+      "ac": "17",
+      "hp": "78 (12d8+24)",
+      "speed": "30 ft.",
+      "abilities": { "str": 18, "dex": 12, "con": 14, "int": 14, "wis": 12, "cha": 15 },
+      "saves": ["FOR +6", "CON +4"],
+      "skills": ["Athletisme +6", "Intimidation +3", "Persuasion +3"],
+      "resistances": [],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 11"],
+      "languages": ["commun", "orc"],
+      "cr": "4 (1100 PX)",
+      "traits": [
+        {
+          "name": "Chef de propagande (Clan de Guldan)",
+          "text": "Dirige le recrutement et les messages du clan de Guldan."
+        },
+        {
+          "name": "Gros cigare",
+          "text": "Toujours un gros cigare; sourire de contrebandier, arrogance calme."
+        },
+        {
+          "name": "Anneaux lies",
+          "text": "Si Vesha est a 30ft: quand Goerbel subit des degats, ils les partagent (Goerbel moitie arrondi bas, Vesha moitie arrondi haut). Ne s'applique pas aux degats transferes."
+        },
+        {
+          "name": "Mieux vaut fuir que mourir (1/combat, couple)",
+          "text": "Si Goerbel et Vesha sont a 30ft et l'un tomberait a 0 PV, il reste a 1 PV a la place; puis Goerbel et Vesha se deplacent chacun de 10ft sans AO."
+        },
+        {
+          "name": "Duo en harmonie",
+          "text": "Si Vesha est a 30ft, Goerbel gagne +1 CA."
+        },
+        {
+          "name": "Duel loyal",
+          "text": "Si un ennemi le provoque en duel et que Goerbel accepte, avantage sur sa premiere attaque contre cette cible jusqu'au debut de son prochain tour."
+        }
+      ],
+      "actions": [
+        { "name": "Multiattaque", "text": "2 attaques de hache lourde." },
+        { "name": "Hache lourde", "text": "Melee 5ft Att+6 1d12+4 tranch." },
+        {
+          "name": "Brise-garde (R5-6)",
+          "text": "Melee 5ft Att+6 2d10+4 tranch | DD14 FOR rate: a terre ou pousse 10ft."
+        },
+        {
+          "name": "Attaque coordonnee (R5-6)",
+          "text": "Si Vesha est a 5ft de la cible: Hache lourde (avantage); si touche: Vesha reaction Lame courbe (avantage); si 2 touches: DD14 DEX moitie: +2d6 tranch."
+        }
+      ],
+      "bonus_actions": [],
+      "reactions": [
+        {
+          "name": "Esquive & riposte (1/tour)",
+          "text": "Quand Goerbel est vise par une attaque qu'il voit: desavantage; si rate: 1 attaque de hache lourde contre l'attaquant."
+        },
+        {
+          "name": "Garde de couple",
+          "text": "Quand Vesha est touchee a 5ft, Goerbel impose desavantage a l'attaque."
+        }
+      ]
+    },
+    {
+      "id": "vesha-lame-froide",
+      "name": "Vesha Lame-Froide",
+      "subtitle": "Medium humanoide (orc), chaotique mauvais",
+      "ac": "16",
+      "hp": "68 (11d8+19)",
+      "speed": "35 ft.",
+      "abilities": { "str": 14, "dex": 18, "con": 14, "int": 12, "wis": 13, "cha": 11 },
+      "saves": ["DEX +6", "SAG +3"],
+      "skills": ["Acrobaties +6", "Perception +3", "Discretion +6"],
+      "resistances": [],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 13"],
+      "languages": ["commun", "orc"],
+      "cr": "4 (1100 PX)",
+      "traits": [
+        {
+          "name": "Rire de bataille",
+          "text": "Humour franc et epique; adore provoquer les mages en plein combat."
+        },
+        {
+          "name": "Anneaux lies",
+          "text": "Si Goerbel est a 30ft: quand Vesha subit des degats, ils les partagent (Vesha moitie arrondi bas, Goerbel moitie arrondi haut). Ne s'applique pas aux degats transferes."
+        },
+        {
+          "name": "Mieux vaut fuir que mourir (1/combat, couple)",
+          "text": "Si Goerbel et Vesha sont a 30ft et l'un tomberait a 0 PV, il reste a 1 PV a la place; puis Goerbel et Vesha se deplacent chacun de 10ft sans AO."
+        },
+        {
+          "name": "Duo en harmonie",
+          "text": "Si Goerbel est a 30ft, Vesha gagne +2 sur sa premiere attaque du tour."
+        },
+        {
+          "name": "Predatrice de casteurs",
+          "text": "Avantage aux saves contre sorts."
+        }
+      ],
+      "actions": [
+        { "name": "Multiattaque", "text": "2 attaques (lame courbe ou dague de disruption)." },
+        { "name": "Lame courbe", "text": "Melee 5ft Att+6 1d8+4 tranch." },
+        { "name": "Dague de disruption", "text": "Dist 20/60ft Att+6 1d4+4 perc | DD13 CON rate: desavantage concentration jusqu'au prochain tour de Vesha." }
+      ],
+      "bonus_actions": [
+        { "name": "Pas fantome", "text": "Vesha se Desengage ou Dash." }
+      ],
+      "reactions": [
+        {
+          "name": "Interception d'incantation (1/tour)",
+          "text": "Quand un ennemi a 30ft lance un sort, Vesha se deplace de 10ft puis fait 1 attaque de dague de disruption."
+        },
+        {
+          "name": "Danse du sang (1/tour)",
+          "text": "Quand Goerbel pousse/attire ou met a terre une creature a 5ft de Vesha: 1 attaque de lame courbe contre cette cible."
+        }
+      ]
+    },
+    {
+      "id": "local-rallie-archer",
+      "name": "Local rallie archer",
+      "subtitle": "Medium humanoide, alignement variable",
+      "ac": "13",
+      "hp": "11 (2d8+2)",
+      "speed": "30 ft.",
+      "abilities": { "str": 11, "dex": 13, "con": 12, "int": 9, "wis": 10, "cha": 9 },
+      "saves": [],
+      "skills": ["Perception +2"],
+      "resistances": [],
+      "senses": ["Perception passive 12"],
+      "languages": ["commun", "orc (rudiments)"],
+      "cr": "1/4 (50 PX)",
+      "traits": [
+        {
+          "name": "Alerte (1/combat)",
+          "text": "Action: envoie l'alerte (cornes/cri/coureur). Renforts (horde) en 2 tours si possible."
+        },
+        { "name": "Tir groupe", "text": "Si un autre local archer est a 10ft: +1 au jet d'attaque a l'arc." }
+      ],
+      "actions": [
+        { "name": "Arc court", "text": "Dist 80/320ft Att+3 1d6+1 perc." },
+        { "name": "Couteau", "text": "Melee 5ft Att+3 1d4+1 perc." }
+      ],
+      "bonus_actions": [],
+      "reactions": []
+    },
+    {
+      "id": "horde-villageois",
+      "name": "Horde de villageois",
+      "subtitle": "Huge swarm of Medium humanoids, alignement variable",
+      "ac": "14",
+      "hp": "100 (20d10)",
+      "speed": "30 ft.",
+      "abilities": { "str": 10, "dex": 14, "con": 11, "int": 10, "wis": 10, "cha": 6 },
+      "saves": [],
+      "skills": [],
+      "resistances": ["contondants, perforants, tranchants"],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 10"],
+      "languages": ["commun", "orc (rudiments)"],
+      "cr": "6 (2300 PX)",
+      "traits": [
+        {
+          "name": "Horde",
+          "text": "Peut occuper l'espace d'une creature (et inversement) et traverser toute ouverture assez large pour une creature Small. Ne regagne pas de PV et ne gagne pas de PV temporaires."
+        },
+        {
+          "name": "Mouvement ralenti",
+          "text": "Une creature non-horde qui commence son tour dans l'espace de la horde voit sa vitesse reduite de moitie jusqu'a la fin du tour."
+        },
+        {
+          "name": "Masse oppressante",
+          "text": "Avantage attaques contre une creature dans son espace."
+        },
+        {
+          "name": "Survivants paniques",
+          "text": "A 0 PV, laisse 1d4 villageois armes (a improviser) dans son espace."
+        },
+        {
+          "name": "Immunites aux conditions",
+          "text": "charmed, frightened, grappled, paralyzed, petrified, prone, restrained, stunned."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Multiattaque",
+          "text": "1 attaque Vague d'outils contre chaque creature dans son espace."
+        },
+        {
+          "name": "Vague d'outils",
+          "text": "Melee 0ft Att+5 8d6 perc (ou 4d6 si <=1/2 PV) | grapple DD14."
+        },
+        {
+          "name": "Pluie de projectiles (R5-6)",
+          "text": "Cylindre 40ft rayon (20ft haut) a 60ft: DD14 DEX 4d6 contondant +4d4 feu (moitie si reussite)."
+        }
+      ],
+      "bonus_actions": [],
+      "reactions": []
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "session": "Prep Session 6",
+  "style": "monster-manual-inspired",
+  "units": "ft",
+  "creatures": [
+    {
+      "id": "brim-grosnez",
+      "name": "Brim Grosnez",
+      "subtitle": "Medium humanoïde (nain), neutre",
+      "ac": "14 (cuir clouté)",
+      "hp": "27 (5d8+5)",
+      "speed": "25 ft.",
+      "abilities": { "str": 13, "dex": 12, "con": 12, "int": 12, "wis": 10, "cha": 14 },
+      "saves": ["CON +3"],
+      "skills": ["Intuition +2", "Investigation +3", "Persuasion +4"],
+      "resistances": ["poison"],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 10"],
+      "languages": ["commun", "nain"],
+      "cr": "1 (200 PX)",
+      "traits": [
+        {
+          "name": "Résilience naine",
+          "text": "Brim a avantage aux jets de sauvegarde contre le poison et a résistance aux dégâts de poison."
+        },
+        {
+          "name": "Œil du marchand",
+          "text": "Brim a avantage aux tests d’Investigation pour estimer la valeur ou la qualité des métaux, armes et armures."
+        },
+        {
+          "name": "Voyageur endurci (1/Repos court)",
+          "text": "Réaction : Brim réduit les dégâts qu’il subit de 1d8."
+        }
+      ],
+      "actions": [
+        { "name": "Multiattaque", "text": "Brim fait deux attaques au corps à corps (marteau de guerre ou dague)." },
+        {
+          "name": "Marteau de guerre",
+          "text": "Attaque au corps à corps : +3 au toucher, allonge 5 ft., une cible. Touché : 5 (1d8+1) dégâts contondants, ou 6 (1d10+1) à deux mains."
+        },
+        {
+          "name": "Dague",
+          "text": "Attaque au corps à corps ou à distance : +3 au toucher, allonge 5 ft. ou portée 20/60 ft., une cible. Touché : 4 (1d4+2) dégâts perforants."
+        }
+      ]
+    },
+    {
+      "id": "garde-nain-discipline",
+      "name": "Garde nain (discipliné)",
+      "subtitle": "Medium humanoïde (nain), loyal neutre",
+      "ac": "17 (cotte de mailles, bouclier)",
+      "hp": "22 (4d8+4)",
+      "speed": "25 ft.",
+      "abilities": { "str": 14, "dex": 10, "con": 12, "int": 10, "wis": 12, "cha": 10 },
+      "skills": ["Athlétisme +4", "Perception +3"],
+      "resistances": ["poison"],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 13"],
+      "languages": ["commun", "nain"],
+      "cr": "1/2 (100 PX)",
+      "traits": [
+        {
+          "name": "Résilience naine",
+          "text": "Le garde a avantage aux jets de sauvegarde contre le poison et a résistance aux dégâts de poison."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Lance",
+          "text": "Attaque au corps à corps ou à distance : +4 au toucher, allonge 5 ft. ou portée 20/60 ft., une cible. Touché : 5 (1d6+2) dégâts perforants, ou 6 (1d8+2) à deux mains."
+        },
+        {
+          "name": "Arbalète légère",
+          "text": "Attaque à distance : +2 au toucher, portée 80/320 ft., une cible. Touché : 5 (1d8+1) dégâts perforants."
+        }
+      ],
+      "reactions": [
+        {
+          "name": "Protection",
+          "text": "Quand une créature à 5 ft. attaque une cible autre que lui, le garde impose un désavantage au jet d’attaque (si le garde voit l’attaquant et porte un bouclier)."
+        }
+      ]
+    },
+    {
+      "id": "garde-nain-colerique",
+      "name": "Garde nain (colérique)",
+      "subtitle": "Medium humanoïde (nain), neutre",
+      "ac": "16 (chemise de mailles, bouclier)",
+      "hp": "27 (5d8+5)",
+      "speed": "25 ft.",
+      "abilities": { "str": 15, "dex": 10, "con": 12, "int": 9, "wis": 11, "cha": 10 },
+      "skills": ["Intimidation +2", "Perception +2"],
+      "resistances": ["poison"],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 12"],
+      "languages": ["commun", "nain"],
+      "cr": "1 (200 PX)",
+      "traits": [
+        {
+          "name": "Résilience naine",
+          "text": "Le garde a avantage aux jets de sauvegarde contre le poison et a résistance aux dégâts de poison."
+        }
+      ],
+      "bonus_actions": [
+        {
+          "name": "Coup de sang (1/Repos court)",
+          "text": "Jusqu’à la fin de son tour, le garde a avantage sur sa prochaine attaque de mêlée et ajoute +2 aux dégâts si elle touche."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Hachette",
+          "text": "Attaque au corps à corps ou à distance : +4 au toucher, allonge 5 ft. ou portée 20/60 ft., une cible. Touché : 5 (1d6+2) dégâts tranchants."
+        },
+        {
+          "name": "Marteau de guerre",
+          "text": "Attaque au corps à corps : +4 au toucher, allonge 5 ft., une cible. Touché : 6 (1d8+2) dégâts contondants."
+        }
+      ]
+    },
+    {
+      "id": "capitaine-orc",
+      "name": "Capitaine orc",
+      "subtitle": "Medium humanoïde (orc), chaotique mauvais",
+      "ac": "15 (armure récupérée)",
+      "hp": "60 (8d8+24)",
+      "speed": "30 ft.",
+      "abilities": { "str": 18, "dex": 12, "con": 16, "int": 8, "wis": 11, "cha": 14 },
+      "saves": ["FOR +6", "CON +5"],
+      "skills": ["Intimidation +4", "Perception +2"],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 12"],
+      "languages": ["commun", "orc"],
+      "cr": "3 (700 PX)",
+      "traits": [
+        {
+          "name": "Agressif",
+          "text": "Action bonus : le capitaine se déplace jusqu’à sa vitesse vers un ennemi qu’il voit."
+        }
+      ],
+      "actions": [
+        { "name": "Multiattaque", "text": "Le capitaine fait deux attaques (hache lourde ou javeline)." },
+        {
+          "name": "Hache lourde",
+          "text": "Attaque au corps à corps : +6 au toucher, allonge 5 ft., une cible. Touché : 11 (1d12+5) dégâts tranchants."
+        },
+        {
+          "name": "Javeline",
+          "text": "Attaque au corps à corps ou à distance : +6 au toucher, allonge 5 ft. ou portée 30/120 ft., une cible. Touché : 8 (1d6+5) dégâts perforants."
+        },
+        {
+          "name": "Chef de raid (Recharge 5–6)",
+          "text": "Jusqu’au début de son prochain tour, le capitaine et jusqu’à 2 alliés orcs qu’il voit à 30 ft. ajoutent 1d4 à leurs jets d’attaque."
+        },
+        {
+          "name": "Dernière charge (1/jour)",
+          "text": "Le capitaine se précipite jusqu’à sa vitesse et déclenche une charge suicide : chaque créature à 10 ft. fait un JS DEX DD 13, subissant 10 (3d6) dégâts perforants + 7 (2d6) dégâts de feu en cas d’échec, moitié en cas de réussite. Le capitaine tombe à 0 PV après l’explosion."
+        }
+      ]
+    },
+    {
+      "id": "orc-guerrier",
+      "name": "Orc guerrier (raider)",
+      "subtitle": "Medium humanoïde (orc), chaotique mauvais",
+      "ac": "13 (cuir, bouclier)",
+      "hp": "15 (2d8+6)",
+      "speed": "30 ft.",
+      "abilities": { "str": 16, "dex": 12, "con": 16, "int": 7, "wis": 11, "cha": 10 },
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 10"],
+      "languages": ["commun", "orc"],
+      "cr": "1/2 (100 PX)",
+      "traits": [
+        { "name": "Agressif", "text": "Action bonus : l’orque se déplace jusqu’à sa vitesse vers un ennemi qu’il voit." }
+      ],
+      "actions": [
+        {
+          "name": "Hache à deux mains",
+          "text": "Attaque au corps à corps : +5 au toucher, allonge 5 ft., une cible. Touché : 9 (1d12+3) dégâts tranchants."
+        },
+        {
+          "name": "Javeline",
+          "text": "Attaque au corps à corps ou à distance : +5 au toucher, allonge 5 ft. ou portée 30/120 ft., une cible. Touché : 6 (1d6+3) dégâts perforants."
+        }
+      ]
+    },
+    {
+      "id": "orc-garde-brute",
+      "name": "Orc garde (brute)",
+      "subtitle": "Medium humanoïde (orc), chaotique mauvais",
+      "ac": "14 (armure récupérée, bouclier)",
+      "hp": "30 (4d8+12)",
+      "speed": "30 ft.",
+      "abilities": { "str": 16, "dex": 10, "con": 16, "int": 8, "wis": 10, "cha": 9 },
+      "skills": ["Perception +2"],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 12"],
+      "languages": ["commun", "orc"],
+      "cr": "1 (200 PX)",
+      "traits": [
+        {
+          "name": "Garde du butin",
+          "text": "Tant qu’il est à 5 ft. d’un allié orc ou de la charrette, l’orque a avantage aux tests pour résister à être bousculé ou repoussé."
+        }
+      ],
+      "actions": [
+        {
+          "name": "Gourdin lourd",
+          "text": "Attaque au corps à corps : +5 au toucher, allonge 5 ft., une cible. Touché : 8 (1d10+3) dégâts contondants."
+        },
+        {
+          "name": "Coup de bouclier (Recharge 6)",
+          "text": "Attaque au corps à corps : +5 au toucher, allonge 5 ft., une cible. Touché : 5 (1d4+3) dégâts contondants et la cible doit réussir un JS FOR DD 13 ou être à terre."
+        }
+      ]
+    },
+    {
+      "id": "orc-archer",
+      "name": "Orc archer (éclaireur)",
+      "subtitle": "Medium humanoïde (orc), chaotique mauvais",
+      "ac": "13 (cuir)",
+      "hp": "13 (2d8+4)",
+      "speed": "30 ft.",
+      "abilities": { "str": 14, "dex": 14, "con": 14, "int": 8, "wis": 11, "cha": 10 },
+      "skills": ["Discrétion +4", "Perception +2"],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 12"],
+      "languages": ["commun", "orc"],
+      "cr": "1/2 (100 PX)",
+      "traits": [
+        { "name": "Agressif", "text": "Action bonus : l’orque se déplace jusqu’à sa vitesse vers un ennemi qu’il voit." }
+      ],
+      "actions": [
+        { "name": "Arc court", "text": "Attaque à distance : +4 au toucher, portée 80/320 ft., une cible. Touché : 5 (1d6+2) dégâts perforants." },
+        { "name": "Cimeterre", "text": "Attaque au corps à corps : +4 au toucher, allonge 5 ft., une cible. Touché : 5 (1d6+2) dégâts tranchants." }
+      ]
+    },
+    {
+      "id": "orc-rogue",
+      "name": "Orc rogue (pillard furtif)",
+      "subtitle": "Medium humanoïde (orc), chaotique mauvais",
+      "ac": "14 (cuir clouté)",
+      "hp": "27 (6d8)",
+      "speed": "30 ft.",
+      "abilities": { "str": 12, "dex": 16, "con": 12, "int": 10, "wis": 12, "cha": 10 },
+      "skills": ["Acrobaties +5", "Discrétion +7", "Perception +3"],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 13"],
+      "languages": ["commun", "orc"],
+      "cr": "1 (200 PX)",
+      "traits": [
+        {
+          "name": "Attaque sournoise (1/tour)",
+          "text": "Une fois par tour, l’orque inflige 7 (2d6) dégâts supplémentaires quand il touche une cible avec une attaque et qu’il a avantage sur le jet d’attaque, ou si un allié de la cible est à 5 ft. d’elle et que l’orque n’a pas désavantage."
+        },
+        { "name": "Action rusée", "text": "À chacun de ses tours, l’orque peut faire Se désengager ou Se cacher en action bonus." }
+      ],
+      "actions": [
+        { "name": "Épée courte", "text": "Attaque au corps à corps : +5 au toucher, allonge 5 ft., une cible. Touché : 6 (1d6+3) dégâts perforants (plus Attaque sournoise si applicable)." },
+        { "name": "Arc court", "text": "Attaque à distance : +5 au toucher, portée 80/320 ft., une cible. Touché : 6 (1d6+3) dégâts perforants (plus Attaque sournoise si applicable)." }
+      ]
+    },
+    {
+      "id": "chamane-orc",
+      "name": "Chamane orc (brouillard)",
+      "subtitle": "Medium humanoïde (orc), chaotique mauvais",
+      "ac": "12 (peaux, talismans)",
+      "hp": "39 (6d8+12)",
+      "speed": "30 ft.",
+      "abilities": { "str": 10, "dex": 12, "con": 14, "int": 10, "wis": 15, "cha": 12 },
+      "skills": ["Médecine +4", "Religion +2", "Perception +4"],
+      "senses": ["vision dans le noir 60 ft.", "Perception passive 14"],
+      "languages": ["commun", "orc"],
+      "cr": "2 (450 PX)",
+      "traits": [
+        {
+          "name": "Incantation",
+          "text": "Le chamane est un lanceur de sorts (SAG ; DD 12, +4 au toucher). À volonté : un tour de magie intimidant. 3/jour : brouillard (type Fog Cloud), peur (type Cause Fear). 1/jour : immobilisation (type Hold Person)."
+        }
+      ],
+      "actions": [
+        { "name": "Bâton rituel", "text": "Attaque au corps à corps : +3 au toucher, allonge 5 ft., une cible. Touché : 3 (1d6) dégâts contondants." },
+        {
+          "name": "Brouillard de pillage (Recharge 5–6)",
+          "text": "Le chamane crée un brouillard dense (rayon 20 ft.) centré sur un point à 60 ft. ; la zone est lourdement obscurcie jusqu’au début de son prochain tour."
+        }
+      ]
+    },
+    {
+      "id": "cheval-trait",
+      "name": "Cheval de trait",
+      "subtitle": "Large bête, non aligné",
+      "ac": "10",
+      "hp": "19 (3d10+3)",
+      "speed": "40 ft.",
+      "abilities": { "str": 18, "dex": 10, "con": 12, "int": 2, "wis": 11, "cha": 7 },
+      "skills": [],
+      "senses": ["Perception passive 10"],
+      "languages": [],
+      "cr": "1/4 (50 PX)",
+      "traits": [
+        { "name": "Bête de trait", "text": "Le cheval est docile et entraîné pour tirer une charge, pas pour combattre." }
+      ],
+      "actions": [
+        { "name": "Sabots", "text": "Attaque au corps à corps : +6 au toucher, allonge 5 ft., une cible. Touché : 9 (2d4+4) dégâts contondants." }
+      ]
+    }
+  ]
+}
